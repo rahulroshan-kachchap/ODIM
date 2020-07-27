@@ -11,6 +11,7 @@
 #WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #License for the specific language governing permissions and limitations
 # under the License.
+
 name: build_unittest
 
 on:
@@ -65,7 +66,7 @@ jobs:
     
     - name: Build
       run: |
-          LIST=`ls | grep -v 'lib-rest-client' | grep -E '^svc-|^plugin-|^odimra'`
+          LIST=`ls -R | grep -v 'lib-rest-client' | grep -E '^svc-|^plugin-'`
           for i in $LIST; do
             echo "Compiling $i"
             cd $i
@@ -109,6 +110,3 @@ jobs:
             fi
             cd ..
           done
-            
-          
-        
