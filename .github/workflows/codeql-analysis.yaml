@@ -1,3 +1,4 @@
+
 # For most projects, this workflow file will not need changing; you simply need
 # to commit it to your repository.
 #
@@ -8,8 +9,7 @@ name: "CodeQL"
 on:
   pull_request:
     # The branches below must be a subset of the branches above
-    branches:
-      - '**'
+    branches: [ development ] 
   schedule:
     - cron: '0 23 * * 6'
 
