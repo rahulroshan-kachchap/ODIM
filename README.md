@@ -7,7 +7,6 @@
 ### Prerequisites
 Ensure that the Internet is available. If your system is behind a corporate proxy or firewall, set your proxy configuration. To set proxy, refer `https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-the-proxy-for-apt-for-ubuntu-18-04/`.  
 
-
 ### Procedure
 1. Download and install `Ubuntu 18.04 LTS` on your system.
     >   **NOTE:**  Before installation, configure your system IP to access the                data center network.
