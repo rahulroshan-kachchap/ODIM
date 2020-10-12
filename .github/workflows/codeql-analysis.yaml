@@ -62,9 +62,12 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    #- run: |
-    #   make bootstrap
-    #   make release
+      run: |
+       ip=`hostname -I | awk '{print $1}'`
+       echo $ip
+       export FQDN=odimra.local.com
+       export HOSTIP=$ip
+       make build-containers
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
