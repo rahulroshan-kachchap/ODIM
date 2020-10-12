@@ -63,6 +63,10 @@ jobs:
 
     - name: Build code
       run: |
+       ip=`hostname -I | awk '{print $1}'`
+       echo $ip
+       export FQDN=odimra.local.com
+       export HOSTIP=$ip
        make all
 
     - name: Perform CodeQL Analysis
