@@ -1,7 +1,6 @@
 [![build_deploy_test Actions Status](https://github.com/ODIM-Project/ODIM/workflows/build_deploy_test/badge.svg)](https://github.com/ODIM-Project/ODIM/actions)
 [![build_unittest Actions Status](https://github.com/ODIM-Project/ODIM/workflows/build_unittest/badge.svg)](https://github.com/ODIM-Project/ODIM/actions)
 
-
 # Deploying ODIMRA
 ## 1. Setting up OS, docker environment and other pre-requisites
 ### Prerequisites
