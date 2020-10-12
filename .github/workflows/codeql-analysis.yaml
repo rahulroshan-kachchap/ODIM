@@ -63,8 +63,7 @@ jobs:
 
     - name: Build code
       run: |
-       make bootstrap
-       make release
+       make all
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
