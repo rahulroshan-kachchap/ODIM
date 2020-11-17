@@ -1,0 +1,23 @@
+on:
+  schedule:
+  - cron:  "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  repo-sync:
+    env:
+      PAT: ${{ secrets.PAT }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      if: env.PAT
+      with:
+        persist-credentials: false
+    - name: repo-sync
+      uses: repo-sync/github-sync@v2
+      if: env.PAT
+      with:
+        source_repo: "https://github.com/ODIM-Project/ODIM.git"
+        source_branch: "development"
+        destination_branch: "development"
+        github_token: ${{ secrets.PAT }}
