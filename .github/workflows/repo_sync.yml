@@ -1,0 +1,25 @@
+name: Merge upstream branches
+on:
+  schedule:
+    - cron:  '*/15 * * * *'
+jobs:
+  repo-sync:
+    env: 
+      PAT: ${{secrets.PAT }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        if: env.PAT
+        with:
+          persist-credentials: false
+      - name: repo-sync
+        run: |
+          git config --global user.name 'rahulroshan-kachchap'
+          git config --global user.email 'rahul.kachchap@hpe.com'
+          git remote add upstream https://github.com/ODIM-Project/ODIM.git
+          git fetch upstream
+          git rebase upstream/development
+          git push -f origin development << HERE
+          rahulroshan-kachchap
+          ${{secrets.PAT }}
+          HERE
