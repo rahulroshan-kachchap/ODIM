@@ -2,6 +2,7 @@ name: Merge upstream branches
 on:
   schedule:
     - cron:  '*/15 * * * *'
+    workflow_dispatch:
 jobs:
   repo-sync:
     env: 
