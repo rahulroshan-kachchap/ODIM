@@ -13,10 +13,8 @@
 # under the License.
 name: new_workflow
 on:
-  pull_request:
-    branches:
-      - '**'
   workflow_dispatch:
+  
 jobs:
   build:
     name: Build
