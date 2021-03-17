@@ -13,7 +13,8 @@
 # under the License.
 name: ci_cd
 on:
-  workflow_dispatch:  
+  workflow_dispatch:
+  
 jobs:
   build:
     name: Build
