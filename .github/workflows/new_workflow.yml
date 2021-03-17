@@ -11,7 +11,7 @@
 #WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 #License for the specific language governing permissions and limitations
 # under the License.
-name: 
+name: Build Deploy Test
 
 on:
   pull_request:
@@ -24,7 +24,7 @@ jobs:
     name: Build
     runs-on: ubuntu-18.04
     steps:
+    - uses: actions/checkout@v2
     - name: Compilation
-      uses: actions/checkout@v2
       run: |
          export ODIMRA_USER_ID=2021; export ODIMRA_GROUP_ID=2021; ./build_images.sh
