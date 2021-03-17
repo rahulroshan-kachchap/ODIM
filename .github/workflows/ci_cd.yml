@@ -14,7 +14,6 @@
 name: ci_cd
 on:
   workflow_dispatch:
-  
 jobs:
   build:
     name: Build
