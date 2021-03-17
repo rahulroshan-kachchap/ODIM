@@ -12,14 +12,12 @@
 #License for the specific language governing permissions and limitations
 # under the License.
 name: new_workflow
-
 on:
   pull_request:
     branches:
       - '**'
   workflow_dispatch:
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-18.04
