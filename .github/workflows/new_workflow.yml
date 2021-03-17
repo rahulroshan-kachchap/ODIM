@@ -22,10 +22,10 @@ jobs:
 
   build:
     name: Build
-	runs-on: ubuntu-18.04
-	steps:
-	- name: Compilation
-	  uses: actions/checkout@v2
-	  run: |
-	    export ODIMRA_USER_ID=2021; export ODIMRA_GROUP_ID=2021
-		./build_images.sh
+    runs-on: ubuntu-18.04
+    steps:
+    - name: Compilation
+      uses: actions/checkout@v2
+      run: |
+         export ODIMRA_USER_ID=2021; export ODIMRA_GROUP_ID=2021
+	 ./build_images.sh
