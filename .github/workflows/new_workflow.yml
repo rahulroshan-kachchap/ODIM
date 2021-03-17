@@ -27,5 +27,4 @@ jobs:
     - name: Compilation
       uses: actions/checkout@v2
       run: |
-         export ODIMRA_USER_ID=2021; export ODIMRA_GROUP_ID=2021
-	 ./build_images.sh
+         export ODIMRA_USER_ID=2021; export ODIMRA_GROUP_ID=2021; ./build_images.sh
